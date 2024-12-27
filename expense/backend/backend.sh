@@ -5,7 +5,7 @@ USERID=$(id -u) # User id
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(basename "$0" | cut -d "." -f1)
 LOG_FILE="/tmp/${TIMESTAMP}-${SCRIPT_NAME}.log"
-REPO_URL="https://github.com/ullagallu123/expense-backend.git"
+REPO_URL="https://github.com/Niharika2211/expense-backend.git"
 APP_DIR="/app"
 SERVICE_FILE="/etc/systemd/system/backend.service"
 
