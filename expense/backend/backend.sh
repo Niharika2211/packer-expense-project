@@ -76,7 +76,7 @@ Description=Backend Service
 
 [Service]
 User=expense
-Environment="DB_HOST=spa-db.bapatlas.site"
+Environment="DB_HOST=mysql-db.nirvanan.online"
 ExecStart=/usr/bin/node $APP_DIR/index.js
 SyslogIdentifier=backend
 
