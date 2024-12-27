@@ -77,6 +77,10 @@ Description=Backend Service
 [Service]
 User=expense
 Environment="DB_HOST=mysql-db.nirvanan.online"
+Environment="DB_USER=expense"
+Environment="DB_PWD=ExpenseApp1"
+Environment="DB_DATABASE=transactions"
+   
 ExecStart=/usr/bin/node $APP_DIR/index.js
 SyslogIdentifier=backend
 
