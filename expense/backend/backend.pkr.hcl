@@ -11,8 +11,19 @@ source "amazon-ebs" "amz2023" {
   ami_name      = "mini-backend-{{timestamp}}"
   instance_type = "t2.micro"
   region        = "us-east-1"
-  source_ami = "ami-0614680123427b75e"
-  ssh_username = "ec2-user"
+}
+
+ source_ami_filter {
+    filters = {
+      name                = "al2023-ami-2023*"
+      architecture        = "x86_64"
+      root-device-type    = "ebs"
+    }
+    most_recent = true
+    owners      = ["amazon"]
+  }
+  
+  ssh_username  = "ec2-user"
 }
 
 build {
