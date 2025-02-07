@@ -76,7 +76,7 @@ Description=Backend Service
 
 [Service]
 User=expense
-Environment="DB_HOST=mysql-db.nirvanan.online"
+Environment="DB_HOST=prod-expense.nirvanan.online"
 Environment="DB_USER=expense"
 Environment="DB_PWD=ExpenseApp1"
 Environment="DB_DATABASE=transactions"
