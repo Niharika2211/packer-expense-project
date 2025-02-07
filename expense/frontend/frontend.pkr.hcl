@@ -7,14 +7,22 @@ packer {
   }
 }
 
-source "amazon-ebs" "amz2023" {
-  ami_name      = "frontend-{{timestamp}}"
+source "amazon-ebs" "amz3_gp3" {
+  ami_name      = "sivaf-{{timestamp}}"
   instance_type = "t3.micro"
-  #region        = "us-east-1"
-  #source_ami = "ami-06c68f701d8090592"
-  region = "us-east-1"
-  source_ami = "ami-0a4408457f9a03be3"
-  ssh_username = "ec2-user"
+  region        = "us-east-1"
+  
+  source_ami_filter {
+    filters = {
+      name                = "al2023-ami-2023*"
+      architecture        = "x86_64"
+      root-device-type    = "ebs"
+    }
+    most_recent = true
+    owners      = ["amazon"]
+  }
+  
+  ssh_username  = "ec2-user"
 }
 
 build {
