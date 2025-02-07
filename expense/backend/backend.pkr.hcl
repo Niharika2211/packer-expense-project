@@ -10,7 +10,7 @@ packer {
 source "amazon-ebs" "amz2023" {
   ami_name      = "mini-backend-{{timestamp}}"
   instance_type = "t2.micro"
-  region        = "ap-south-1"
+  region        = "us-east-1"
   source_ami = "ami-0614680123427b75e"
   ssh_username = "ec2-user"
 }
