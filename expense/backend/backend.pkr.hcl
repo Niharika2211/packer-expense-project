@@ -11,7 +11,7 @@ source "amazon-ebs" "amz2023" {
   ami_name      = "mini-backend-{{timestamp}}"
   instance_type = "t2.micro"
   region        = "us-east-1"
-}
+
 
  source_ami_filter {
     filters = {
