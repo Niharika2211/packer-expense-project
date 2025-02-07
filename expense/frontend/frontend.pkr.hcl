@@ -27,7 +27,7 @@ source "amazon-ebs" "amz3_gp3" {
 
 build {
   name    = "frontend"
-  sources = ["source.amazon-ebs.amz2023"]
+  sources = ["source.amazon-ebs.amz3_gp3"]
 
   provisioner "file" {
     source      = "frontend.sh"
