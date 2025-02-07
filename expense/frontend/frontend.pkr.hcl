@@ -8,7 +8,7 @@ packer {
 }
 
 source "amazon-ebs" "amz3_gp3" {
-  ami_name      = "mini-frontend-{{timestamp}}""
+  ami_name      = "mini-frontend-{{timestamp}}"
   instance_type = "t3.micro"
   region        = "us-east-1"
   
