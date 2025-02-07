@@ -23,7 +23,6 @@ source "amazon-ebs" "amz2023" {
   }
   
   ssh_username  = "ec2-user"
-
 }
 
 build {
