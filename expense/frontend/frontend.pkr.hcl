@@ -12,7 +12,7 @@ source "amazon-ebs" "amz2023" {
   instance_type = "t3.micro"
   #region        = "us-east-1"
   #source_ami = "ami-06c68f701d8090592"
-  region = "ap-south-1"
+  region = "us-east-1"
   source_ami = "ami-0a4408457f9a03be3"
   ssh_username = "ec2-user"
 }
